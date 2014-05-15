@@ -1,0 +1,90 @@
+@import "compass/reset";
+@import "compass/css3";
+@font-face {font-family: 'roboto_slabthin';src: url('fonts/RobotoSlab-Thin-webfont.eot');src: url('fonts/RobotoSlab-Thin-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/RobotoSlab-Thin-webfont.woff') format('woff'), url('RobotoSlab-Thin-webfont.ttf') format('truetype'),url('fonts/RobotoSlab-Thin-webfont.svg#roboto_slabthin') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'roboto_slablight';src: url('fonts/RobotoSlab-Light-webfont.eot');src: url('fonts/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/RobotoSlab-Light-webfont.woff') format('woff'),url('fonts/RobotoSlab-Light-webfont.ttf') format('truetype'),url('fonts/RobotoSlab-Light-webfont.svg#roboto_slabaght') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'roboto_slabregular';src: url('fonts/RobotoSlab-Regular-webfont.eot');src: url('fonts/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/RobotoSlab-Regular-webfont.woff') format('woff'),url('fonts/RobotoSlab-Regular-webfont.ttf') format('truetype'),url('fonts/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'roboto_slabbold';src: url('fonts/RobotoSlab-Bold-webfont.eot');src: url('fonts/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/RobotoSlab-Bold-webfont.woff') format('woff'),url('fonts/RobotoSlab-Bold-webfont.ttf') format('truetype'), url('fonts/RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg');font-weight: normal;font-style: normal;}
+
+$color: #8fc64a;
+$font-main: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-thin: "roboto_slabthin", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-light: "roboto_slablight", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-reg: "roboto_slabregular", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-bold: "roboto_slabbold", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+/* general */
+html, body {height: 100%;margin: 0;padding: 0;}
+body {font-size: 12px; background: #fff;font-family: $font-main;-webkit-font-smoothing: antialiased; line-height: 1.42857em; width: 100%; }
+#wraper {height: auto;min-height: 100%; width: 77em; margin: 0 auto; }
+
+a {text-decoration: none; }
+h1, h2, h3, h4, h5, h6 {font-family: $font-thin; }
+h1 {margin:0; font-size: 2em; padding: 0px 0px 0em 0px;}
+.block-header {color: #515151;font-family: $font-main;font-size: 14px;font-weight: 500;line-height: 1.2em; text-transform: uppercase;}
+/* general - input */
+input, textarea, keygen, select, button, isindex {padding: 0em 0.71em;border: 1px solid #dbdee4;outline: 0;
+font-size: 0.8571em;height: 30px;background: #fff;color: #282828;@include border-radius(3px); box-sizing: border-box;}
+textarea {padding: 0.71em 0.71em; background: #fff;height: 125px;resize: none; width: 100%;display: block;overflow: hidden;position: relative;}
+input:hover, textarea:hover, select:hover {border-color: #c0c1c3;}
+input:active, textarea:active, select:active, input:focus, textarea:focus, select:focus {border-color: #8B8B8B;}
+select {-webkit-appearance: initial;moz-appearance: initial; -ms-appearance: initial; -o-appearance: initial;appearance: initial;}
+input[type="password"], input[type="search"] {-webkit-appearance: textfield;}
+input[type="search"]::-webkit-search-cancel-button {display: none;}
+input[type=checkbox].checkbox, input[type=radio].radio  {position: absolute; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0;border:0;}
+input[type=checkbox].checkbox + label.checkbox-label, input[type=radio].radio + label.radio-label {padding-left:1.5em;height:15px; display:inline-block;background-repeat:no-repeat;background-position: 0 3px;font-size:1em;color: #515151;vertical-align:middle;cursor:pointer;}
+input[type=checkbox].checkbox:checked + label.checkbox-label {background-position: 0 -16px;}
+input[type=radio].radio + label.radio-label {background-position: 0 -36px;}
+input[type=radio].radio:checked + label.radio-label {background-position: 0 -55px;}
+label.select-label {position: absolute;width: 8px;height: 5px;right: 8px;display: block;top: 13px;background: url(../img/sprite.png) 0 -175px no-repeat;}
+.checkbox-label, .radio-label {background-image:url(../img/check-boxes.png);}
+::-webkit-input-placeholder { color:    #282828;}
+:-moz-placeholder {color:    #282828;opacity:  1;}
+::-moz-placeholder {color:    #282828;opacity:  1;}
+:-ms-input-placeholder { color:    #282828;}
+.float-right {float: right;}
+.float-left {float: left;}
+.block-separator {height: 1px;display: block;width: 100%;margin: 2em 0 2em 0;border-top: 1px solid #e9e9e9;}
+/* general - btn */
+.upload-btn {width: 81px; height: 30px;@include opacity(0); padding: 0;margin: 0; border: none;border-radius: 0;cursor: pointer;display: block;text-indent: -9999px;}
+.icon {background: url(../img/sprite.png) 0 0 no-repeat; @include inline-block;}
+.btn {line-height: 30px; @include inline-block;font-size: 0.8571em;background: #8fc64a;color: #fff;border: none;@include border-radius(3px);padding: 0 1.1em 0 1.1em;cursor: pointer; font-family: $font-reg; @include transition-property(background);@include transition-duration(0.2s);@include transition-timing-function(ease-in)}
+.btn:hover, .btn:focus, .btn:active{background: #9fd957;}
+.link-btn {padding: 0em 1.1em 0em 1.1em;}
+.grey-btn {background: #dbdee4;}
+.green-link {display: block;font-size: 0.8571em;color: #8fc64a;text-decoration: underline;}
+
+/* global nav */
+#global-nav {background: #f7f7f7;height: 50px;border-radius: 3px;border: 1px solid #e5e5e5;position: relative; margin: 2em 0;}
+#global-nav ul li {display: block;  float: left;}
+#global-nav ul li a {color: rgba(86,86,86,0.5);display: block;line-height: 50px;border-right: 1px solid #e5e5e5; padding: 0 2.2em;}
+#global-nav ul li.cart-holder {float: right;}
+#global-nav ul li.cart-holder a {border-right: none; border-left: 1px solid #e5e5e5;}
+span#cart-qnt {color: #8fc64a;}
+#global-nav ul li:hover a, #global-nav ul li:focus a, #global-nav ul li:active a, #global-nav ul li.active a { color: rgba(86,86,86,1);}
+
+/*main */
+
+.page-title {float: left;}
+.form-group { position: relative; margin: 0 5px 0 0;}
+.inline {@include inline-block;}
+
+
+/*main - content - bottom-nav*/
+#bottom-nav { padding: 1.5em 0; overflow: hidden;}
+#top-nav {margin-bottom: 1.5em;overflow: hidden;}
+#top-nav-search {float: right;} 
+#item-per-page-wraper {float: left;}
+#solutions-page #item-per-page-wraper {float:right;margin: 0;}
+#pagination {float: right;}
+.pagination li {float: left; display: block;}
+.pagination li a, .pagination li span {@include transition-property(all);@include transition-duration(0.2s);@include transition-timing-function(ease-in); border: 1px solid #dbdee4; font-size: 0.8571em; border-right:none;color: #5e5e5e;  padding: 0em 0.9em 0em; display: block; line-height: 28px}
+.pagination li:nth-child(2) a, .pagination li:nth-child(2) span {border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
+.pagination li:nth-last-child(2) a, .pagination li:nth-last-child(2) span {border-right: 1px solid #dbdee4; border-top-right-radius: 3px; border-bottom-right-radius: 3px;}
+.pagination li.prev a, .pagination li.next a { @include border-radius(3px); border-right: 1px solid #dbdee4; }
+.pagination li.prev a {margin: 0 0.7143em 0 0;}
+.pagination li.next a {margin: 0 0 0 0.7143em;}
+.pagination li.current span, .pagination li a:hover, .pagination li a:focus, .pagination li a:active {background: #8fc64a; border-color: transparent; color: #fff;} 
+
+
+
+
