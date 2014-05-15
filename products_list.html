@@ -21,104 +21,186 @@
 			</div>
 			<div id="header-search">
 				<div class="form-group inline">
-					<input type="search" name="product-search" id="product-search" class="search-wide"  value=""  placeholder="Search Product">
-					<button type="submit" class="icon search-icon"></button>
+					<form id="search-form">
+						<input type="search" name="product-search" id="product-search" class="search-wide"  value=""  placeholder="Search Product">
+						<button type="submit" class="icon search-icon"></button>
+					</form>
 				</div>
 			</div>
 		</header>
 		<nav id="global-nav">
 			<ul>
-
 				<li class="active"><a href="">Products</a></li>
 				<li><a href="">Tass</a></li>
 				<li><a href="">Byod</a></li>
-				<li class="cart-holder"><a href=""><span class="icon cart-icon"></span>Cart <span id="cart-qnt">(4)</span></a></li>
+				<li class="cart-holder"><a href=""><span class="icon cart-icon"></span>Cart <span id="cart-qnt"> (4)</span></a></li>
 			</ul>
 		</nav>
 		<div id="main">
-			<header id="header">
-				<div class="page-title">
-					<h1>Products</h1>
-				</div>
-				<div id="header-nav">
-					<a id="add-new-product" href="" class="btn link-btn">Add a new product</a>
-				</div>
-			</header>
-			<div id="content">
-				<form method="get">
-					<div id="top-nav">
-						<div class="bulk-actions" >
-							<div class="form-group inline">
-								<select name="action-top" id="action-top">
-									<option value="0" selected="selected">Bulk Actions</option>
-									<option value="edit">Edit</option>
-									<option value="trash">Move to Trash</option>
-								</select>
-								<label for="action-top" class="select-label"></label>
-							</div>
-							<input type="submit" name="action-top-sumbit" id="action-top-sumbit" class="btn action" value="Apply">
-						</div>
-						<div id="top-nav-search">
-							<div class="form-group inline">
-								<select name="product-cat" id="product-cat" class="select-wide">
-									<option value="0" selected="selected">All Categories</option>
-									<option value="1">Products</option>
-									<option value="1">Tablets</option>
-									<option value="2">Smartphones</option>
-								</select>
-								<label for="product-cat" class="select-label"></label>
-							</div>
-							<div class="form-group inline">
-								<input type="search" name="product-search" id="product-search" class="search-wide"  value=""  placeholder="Search Product">
-								<button type="submit" class="icon search-icon"></button>
-							</div>
-						</div>
+			<div id="left">
+				<h3>Filter By:</h3>
+				<form>
+					<div class="filter-group">
+						<h4>Brand</h4>
+						<ul>
+							<li>
+								<input name="brand" id="brand-1" class="checkbox" type="checkbox">
+								<label for="brand-1" class="checkbox-label">Panasonic <span class="filter-prod-count">(24)</span></label>
+							</li>
+							<li>
+								<input name="brand" id="brand-2" class="checkbox" type="checkbox">
+								<label for="brand-2" class="checkbox-label">Motion Computing <span class="filter-prod-count">(13)</span></label>
+							</li>
+							<li>
+								<input name="brand" id="brand-3" class="checkbox" type="checkbox">
+								<label for="brand-3" class="checkbox-label">Apple Computer <span class="filter-prod-count">(24)</span></label>
+							</li>
+							<li>
+								<input name="brand" id="brand-4" class="checkbox" type="checkbox">
+								<label for="brand-4" class="checkbox-label">Hewlett Packard <span class="filter-prod-count">(12)</span></label>
+							</li>
+						</ul>
+						<a href="" class="more-options"><span class="icon black-plus-icon"></span>View More Option</a>
 					</div>
-					
-					<div id="bottom-nav">
-						<div class="bulk-actions">
-							<div class="form-group inline">
-								<select name="action-bottom" id="action-bottom">
-									<option value="0" selected="selected">Bulk Actions</option>
-									<option value="edit">Edit</option>
-									<option value="trash">Move to Trash</option>
-								</select>
-								<label for="action-bottom" class="select-label"></label>
-							</div>
-							<input type="submit" name="action-bottom-sumbit" id="action-bottom-sumbit" class="btn action" value="Apply">
-						</div>
-						<div id="item-per-page-wraper">
-							<div class="form-group inline">
-								<select name="item-per-page" id="item-per-page" >
-									<option value="20" selected="selected">20 items per page</option>
-									<option value="30">30 items per page</option>
-									<option value="50">30 items per page</option>
-									<option value="70">70 items per page</option>
-									<option value="100">100 items per page</option>
-									<option value="200">200 items per page</option>
-									<option value="500">500 items per page</option>
-									<option value="all">All items</option>
-								</select>
-								<label for="item-per-page" class="select-label"></label>
-							</div>
-						</div>
-						<div id="pagination">				
-							<ul class="pagination">
-								<li class="prev"><a href="">Prev</a></li>
-								<li class="current"><span>1</span></li>
-								<li><a href="">2</a></li>
-								<li><a href="">3</a></li>
-								<li><a href="">4</a></li>
-								<li class="more"><a href="">&hellip;</a></li>
-								<li><a href="">14</a></li>
-								<li><a href="">15</a></li>
-								<li><a href="">16</a></li>
-								<li class="next"><a href="">Next</a></li>
-							</ul>
-						</div>
+					<div class="filter-group">
+						<h4>Screen Size</h4>
+						<ul>
+							<li>
+								<input name="screen-size" id="screen-size-1" class="checkbox" type="checkbox">
+								<label for="screen-size-1" class="checkbox-label">10 in <span class="filter-prod-count">(321)</span></label>
+							</li>
+							<li>
+								<input name="Brand" id="screen-size-2" class="checkbox" type="checkbox">
+								<label for="screen-size-2" class="checkbox-label">10.1 in <span class="filter-prod-count">(123)</span></label>
+							</li>
+							<li>
+								<input name="Brand" id="screen-size-3" class="checkbox" type="checkbox">
+								<label for="screen-size-3" class="checkbox-label">10.4 in <span class="filter-prod-count">(41)</span></label>
+							</li>
+							<li>
+								<input name="Brand" id="screen-size-4" class="checkbox" type="checkbox">
+								<label for="screen-size-4" class="checkbox-label">10.6 in <span class="filter-prod-count">(13)</span></label>
+							</li>
+						</ul>
+						<a href="" class="more-options"><span class="icon black-plus-icon"></span>View More Option</a>
+					</div>
+					<div class="filter-group">
+						<h4>Operating System</h4>
+						<ul>
+							<li>
+								<input name="oper-sys" id="oper-sys-1" class="checkbox" type="checkbox">
+								<label for="oper-sys-1" class="checkbox-label">Android 2.3  <span class="filter-prod-count">(13)</span></label>
+							</li>
+							<li>
+								<input name="oper-sys" id="oper-sys-2" class="checkbox" type="checkbox">
+								<label for="oper-sys-2" class="checkbox-label">Android 3.x <span class="filter-prod-count">(31)</span></label>
+							</li>
+							<li>
+								<input name="oper-sys" id="oper-sys-3" class="checkbox" type="checkbox">
+								<label for="oper-sys-3" class="checkbox-label">Android 4.0  <span class="filter-prod-count">(14)</span></label>
+							</li>
+							<li>
+								<input name="oper-sys" id="oper-sys-4" class="checkbox" type="checkbox">
+								<label for="oper-sys-4" class="checkbox-label">Android 4.0.3 <span class="filter-prod-count">(27)</span></label>
+							</li>
+						</ul>
+						<a href="" class="more-options"><span class="icon black-plus-icon"></span>View More Option</a>
 					</div>
 				</form>
 			</div>
+			<div id="content" class="with-left">
+				<div class="row">
+					<div id="breadcrumb-holder">
+						<ul>
+							<li><a href="">All Categories</a></li>
+							<li class="separator"><span class="icon breadcrumb-icon"></span></li>
+							<li><a href="">Computers</a></li>
+							<li class="separator"><span class="icon breadcrumb-icon"></span></li>
+							<li class="active"><span>Tablets</span></li>
+					</div>
+					<div id="prod-catalog-dd" class="wrapper-dropdown float-right" tabindex="1">
+						<span>All Product Catalog</span>
+						<ul class="dropdown" tabindex="1">
+							<li><a href="">All Product Catalog</a></li>
+							<li><a href="">Tablets</a></li>
+							<li><a href="">Smartphones</a></li>
+						</ul>
+					</div>
+				​</div>
+				<div class="block-separator"></div>
+				<div class="row" id="top-nav">
+					<div class="float-left">
+						<div id="sort-by-dd" class="wrapper-dropdown float-left" tabindex="2">
+							<span>Sort by</span>
+							<ul class="dropdown" tabindex="2">
+								<li><a href="">Brand: A - Z</a></li>
+								<li><a href="">Brand: Z - A</a></li>
+								<li><a href="">Price: Low to High</a></li>
+								<li><a href="">Price: High to Low</a></li>
+							</ul>
+						</div>
+						<div id="view-dd" class="wrapper-dropdown float-left" tabindex="3">
+							<span>View</span>
+							<ul class="dropdown" tabindex="3">
+								<li><a href=""><span class="icon gallery-icon"></span>Gallery</a></li>
+								<li><a href=""><span class="icon list-icon"></span>List</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="pagination">				
+						<ul class="pagination">
+							<li class="prev"><a href="">Prev</a></li>
+							<li class="current"><span>1</span></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li class="more"><a href="">&hellip;</a></li>
+							<li><a href="">14</a></li>
+							<li><a href="">15</a></li>
+							<li><a href="">16</a></li>
+							<li class="next"><a href="">Next</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="product-item">
+					<div class="img-rate-comment">
+						<div class="product-image">
+							<a href=""><img src='img/ipad.jpg'></a>
+						</div>
+						<div class="product-rating">
+							<a href=""><img src='img/stars.png'></a>
+						</div>
+						<div class="product-comments">
+							<a href="" class="green-link">145 Comments</a>
+						</div>
+					</div>
+					<div class="product-item-info">
+						<h2>Apple iPad mini Wi-Fi Tablet -16 GB - 7.9”</h2>
+						<div class="product-attr-container">
+							<div class="product-attr-item">
+								<span class="product-attr-item-name">Screen Size: </span><span class="product-attr-item-value"> 7.9 in</span>
+							</div>
+							<div class="product-attr-item">
+								<span class="product-attr-item-name">Operating System: </span><span class="product-attr-item-value"> Apple iOS7</span>
+							</div>
+							<div class="product-attr-item">
+								<span class="product-attr-item-name">CPU Type: </span><span class="product-attr-item-value"> A5</span>
+							</div>
+							<div class="product-attr-item">
+								<span class="product-attr-item-name">Storage: </span><span class="product-attr-item-value"> 16 BG</span>
+							</div>
+							<div class="product-attr-item">
+								<span class="product-attr-item-name">Resolution: </span><span class="product-attr-item-value"> 1024 x 768</span>
+							</div>
+						</div>
+						<a href="" class="product-more-info green-link">View More Info</a>
+					</div>
+					<div class="product-price-stock">
+						<h3>Price and Available</h3>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>	
+	</div>
+	
 </body>

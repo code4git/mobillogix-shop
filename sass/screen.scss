@@ -14,11 +14,10 @@ $font-bold: "roboto_slabbold", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 /* general */
 html, body {height: 100%;margin: 0;padding: 0;}
-body {font-size: 12px; background: #fff;font-family: $font-main;-webkit-font-smoothing: antialiased; line-height: 1.42857em; width: 100%; }
-#wraper {height: auto;min-height: 100%; width: 77em; margin: 0 auto; }
-
+body {font-size: 14px; background: #fff;font-family: $font-main;-webkit-font-smoothing: antialiased; line-height: 1.42857em; width: 100%; color: #282828 }
+#wraper {height: auto;min-height: 100%; width: 66em; margin: 0 auto; }
 a {text-decoration: none; }
-h1, h2, h3, h4, h5, h6 {font-family: $font-thin; }
+h1, h2, h3, h4, h5, h6 {font-family: $font-bold; }
 h1 {margin:0; font-size: 2em; padding: 0px 0px 0em 0px;}
 .block-header {color: #515151;font-family: $font-main;font-size: 14px;font-weight: 500;line-height: 1.2em; text-transform: uppercase;}
 /* general - input */
@@ -31,7 +30,7 @@ select {-webkit-appearance: initial;moz-appearance: initial; -ms-appearance: ini
 input[type="password"], input[type="search"] {-webkit-appearance: textfield;}
 input[type="search"]::-webkit-search-cancel-button {display: none;}
 input[type=checkbox].checkbox, input[type=radio].radio  {position: absolute; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0;border:0;}
-input[type=checkbox].checkbox + label.checkbox-label, input[type=radio].radio + label.radio-label {padding-left:1.5em;height:15px; display:inline-block;background-repeat:no-repeat;background-position: 0 3px;font-size:1em;color: #515151;vertical-align:middle;cursor:pointer;}
+input[type=checkbox].checkbox + label.checkbox-label, input[type=radio].radio + label.radio-label {padding-left:1.5em;height:15px; display:inline-block;background-repeat:no-repeat;background-position: 0 3px;font-size:0.8571em;color: #2a2a2a;vertical-align:middle;cursor:pointer;}
 input[type=checkbox].checkbox:checked + label.checkbox-label {background-position: 0 -16px;}
 input[type=radio].radio + label.radio-label {background-position: 0 -36px;}
 input[type=radio].radio:checked + label.radio-label {background-position: 0 -55px;}
@@ -51,27 +50,77 @@ label.select-label {position: absolute;width: 8px;height: 5px;right: 8px;display
 .btn:hover, .btn:focus, .btn:active{background: #9fd957;}
 .link-btn {padding: 0em 1.1em 0em 1.1em;}
 .grey-btn {background: #dbdee4;}
-.green-link {display: block;font-size: 0.8571em;color: #8fc64a;text-decoration: underline;}
+.page-title {float: left;}
+.form-group { position: relative; margin: 0;}
+.inline {@include inline-block;}
+.row {clear: both;}
+.green-link {color: #8fc64a;font-size: 0.8571em;text-decoration: underline;}
+.green-link:hover, .green-link:active, .green-link:focus {color: #9fd957; text-decoration: none;}
+
+/* header */
+#header {margin: 1em 0 0em 0; overflow: hidden;}
+#logo {float: left;line-height: 1;}
+#logo a {display: block;}
+#header-search {float: right;margin: 1.3em 0 0 0;}
+#product-search {width: 17em;}
 
 /* global nav */
-#global-nav {background: #f7f7f7;height: 50px;border-radius: 3px;border: 1px solid #e5e5e5;position: relative; margin: 2em 0;}
+#global-nav {background: #f7f7f7;height: 48px;border-radius: 3px;border: 1px solid #e5e5e5;position: relative; margin: 1.3em 0 2em;}
 #global-nav ul li {display: block;  float: left;}
-#global-nav ul li a {color: rgba(86,86,86,0.5);display: block;line-height: 50px;border-right: 1px solid #e5e5e5; padding: 0 2.2em;}
+#global-nav ul li a {color: rgba(86,86,86,0.5);font-size: 0.8571em;display: block;line-height: 48px;border-right: 1px solid #e5e5e5; padding: 0 2.2em;font-weight: 500;}
 #global-nav ul li.cart-holder {float: right;}
 #global-nav ul li.cart-holder a {border-right: none; border-left: 1px solid #e5e5e5;}
-span#cart-qnt {color: #8fc64a;}
+span#cart-qnt {color: #8fc64a; margin: 0 0 0 0.2em;}
 #global-nav ul li:hover a, #global-nav ul li:focus a, #global-nav ul li:active a, #global-nav ul li.active a { color: rgba(86,86,86,1);}
 
 /*main */
+/*main - left */
+div#left {float: left;border: 1px solid #e5e5e5;width: 13em; margin: 0 1.7em 0 0 ;}
+#left h3 {
+color: #676e79;
+padding: 1em 0 0em 1em;
+text-transform: uppercase;
+}
+div.filter-group {
+padding: 1em 0.5em 1.5em 1em;
+border-bottom: 1px solid #e5e5e5;
+}
+#left .filter-group:last-child {border: none;}
+.filter-group h4 {padding: 0 0 0.75em 0; color: #8fc64a;}
+.filter-prod-count {color: #a5a5a5;}
+.more-options {color: #2a2a2a; font-size: 0.8571em; display: block;margin-top: 0.5em}
 
-.page-title {float: left;}
-.form-group { position: relative; margin: 0 5px 0 0;}
-.inline {@include inline-block;}
-
-
+/* main - content */
+#content.with-left {float: left;width: 51em;min-height: 700px;}
+#breadcrumb-holder {float: left; margin: 0.5em 0 0;}
+#breadcrumb-holder ul li {display: inline-block;}
+#breadcrumb-holder ul li a {color: #8fc64a;font-size: 0.8571em;text-decoration: underline;}
+#breadcrumb-holder ul li span {font-size: 0.8571em;}
+#breadcrumb-holder ul li a:hover, #breadcrumb-holder ul li a:active, #breadcrumb-holder ul li a:focus {color: #9fd957; text-decoration: none;}
+.product-item {border: 1px solid #e5e5e5; min-height: 250px;}
+div.img-rate-comment {float:left;
+width: 12em;
+text-align: center;
+padding: 2em 0em 0 2.5em;
+}
+.product-item-info {float:left; width: 17.5em;
+border-right: 1px solid #e5e5e5;
+min-height: 222px;
+padding: 2em 1.5em 0 2.5em;}
+.product-item-info h2 {font-size: 1.2em;line-height: 1.3em;padding: 0 2em 0 0; }
+.product-attr-container {margin: 1.5em 0 0.8em 0;}
+.product-attr-item {}
+.product-attr-item-name {font-weight: 500; width: 10.5em;display: inline-block;}
+.product-price-stock {float:left;}
+.product-price-stock {
+width: 100%;
+float: left;
+width: 13em;
+padding: 1.5em 0 0 1.5em;
+}
 /*main - content - bottom-nav*/
 #bottom-nav { padding: 1.5em 0; overflow: hidden;}
-#top-nav {margin-bottom: 1.5em;overflow: hidden;}
+#top-nav {min-height: 30px; margin: 0 0 2em 0;}
 #top-nav-search {float: right;} 
 #item-per-page-wraper {float: left;}
 #solutions-page #item-per-page-wraper {float:right;margin: 0;}
@@ -85,6 +134,41 @@ span#cart-qnt {color: #8fc64a;}
 .pagination li.next a {margin: 0 0 0 0.7143em;}
 .pagination li.current span, .pagination li a:hover, .pagination li a:focus, .pagination li a:active {background: #8fc64a; border-color: transparent; color: #fff;} 
 
+/* icons */
+.search-icon {width: 12px;height: 12px;position: absolute;right: 7px;top: 9px;cursor: pointer;display: block;border: none;}
+span.cart-icon {width: 18px;height: 18px;background-position: 0 -14px;margin: -3px 0.5em 0 0;@include opacity(0.5);}
+span.black-plus-icon {width: 13px;height: 13px;background-position: 0 -43px;margin: -2px 6px 0 0;}
+span.breadcrumb-icon {width: 7px; height: 12px;background-position: 0 -60px; margin: 0 1em 0 1em;}
+span.gallery-icon {width: 9px;height: 9px;background-position: 0 -84px;margin: -2px 5px 0 0;}
+span.list-icon {width: 9px;height: 9px;background-position: 0 -72px;margin: -2px 5px 0 0;}
+
+#global-nav ul li.cart-holder:hover span.cart-icon {@include opacity(1);}
+
+#prod-catalog-dd, #sort-by-dd {width: 150px;}
+#view-dd {width: 80px; margin: 0 0 0 1em;}
+.wrapper-dropdown {position: relative;color: #282828;outline: none;font-size: 0.8571em;cursor: pointer;border: 1px solid #dbdee4;padding: 0em 0.71em;line-height: 28px;box-sizing: border-box;outline: 0;@include border-radius(3px);}
+.wrapper-dropdown:after {content: "";width: 8px;height: 5px;position: absolute;right: 10px;top: 50%;margin-top: -2px;background: url(../img/sprite.png) 0 -35px no-repeat; }
+.wrapper-dropdown .dropdown {@include border-radius( 0 0 3px 3px);position: absolute;border: 1px solid #8B8B8B;top: 100%;left: 0;right: 0;outline: 0;margin: 0 -1px 0 -1px;  background: #fff;list-style: none; font-weight: normal; opacity: 0; pointer-events: none;}
+.wrapper-dropdown .dropdown li a { display: block; text-decoration: none;color: #676e79;padding: 0px 10px; outline: 0;border-bottom: 1px solid #EBEBEB;}
+.wrapper-dropdown .dropdown li:last-child a {border-bottom: none;@include border-radius( 0 0 3px 3px);}
+.wrapper-dropdown .dropdown li:hover a { background: #f3f8f8;}
+.wrapper-dropdown.active .dropdown {opacity: 1;pointer-events: auto;}
+.wrapper-dropdown:hover {border-color: #c0c1c3;}
+.wrapper-dropdown.active {@include border-radius(3px 3px 0 0);border-color: #8B8B8B; }
+.wrapper-dropdown.active:after {background-position: -11px -35px;}
 
 
+/* No CSS3 support */
+
+.no-opacity       .wrapper-dropdown .dropdown,
+.no-pointerevents .wrapper-dropdown .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown.active .dropdown,
+.no-pointerevents .wrapper-dropdown.active .dropdown {
+    display: block;
+}
 
