@@ -73,12 +73,13 @@ span#cart-qnt {color: #8fc64a; margin: 0 0 0 0.2em;}
 /*main */
 /*main - left */
 div#left {float: left;border: 1px solid #e5e5e5;width: 13em; margin: 0 1.7em 0 0 ;}
-#left h3 {color: #676e79;padding: 1em 0 0em 1em;text-transform: uppercase;}
+#left h3 {color: #676e79;padding: 1em 0 0em 1em;text-transform: uppercase; font-size: 0.9em;}
 div.filter-group {padding: 1em 0.5em 1.5em 1em;border-bottom: 1px solid #e5e5e5;}
 #left .filter-group:last-child {border: none;}
 .filter-group h4 {padding: 0 0 0.75em 0; color: #8fc64a;}
 .filter-prod-count {color: #a5a5a5;}
-.more-options {color: #2a2a2a; font-size: 0.8571em; display: block;margin-top: 0.5em; cursor:pointer;}
+.filter-group ul li {font-size: 0.8571em;}
+.more-options {color: #2a2a2a; display: block;margin-top: 0.5em; cursor:pointer;}
 
 /* main - content */
 #content.with-left {float: left;width: 51em;}
@@ -90,16 +91,17 @@ div.filter-group {padding: 1em 0.5em 1.5em 1em;border-bottom: 1px solid #e5e5e5;
 .product-item {border: 1px solid #e5e5e5; overflow:hidden;margin: -1px 0 0 0;}
 .img-rate-comment {float:left;width: 12em;text-align: center;padding: 1.5em 1.24em 1.5em 2.5em;}
 .product-comments {margin: 0.5em 0 0 0;}
-.product-item-info {float:left; width: 17.5em;border-right: 1px solid #e5e5e5;padding: 1.5em 1.5em 1.5em 1.24em;}
+.product-item-info {float:left; width: 17.5em;padding: 1.5em 1.5em 1.5em 1.24em;}
 .product-item-info h2 {font-size: 1.2em;line-height: 1.3em;padding: 0 2em 0 0; }
 .product-attr-container {margin: 1.5em 0 1.3em 0;}
 .product-attr-item-name {font-weight: bold; width: 10.5em;display: inline-block;}
-.product-price-stock {float:left;}
-.product-price-stock {width: 100%;float: left;width: 12.5em;padding: 1em 0.8em 1em 1.5em;}
-.product-price-stock h3 {margin: 0em 0 1em 0em;text-transform: uppercase;}
-.form-group.group-radio {font-weight: bold; margin: 0 0 0.5em 0;}
+.product-price-stock {float:left;border-left: 1px solid #e5e5e5;} 
+.product-price-stock {width: 100%;float: left;width: 12.5em;padding: 1em 0.8em 1.2em 1.5em;}
+.product-price-stock h3 {margin: 0em 0 0.9em 0em;text-transform: uppercase;font-size: 0.9em;}
+.form-group.group-radio {font-weight: bold; margin: 0 0 0.825em 0;}
 .product-price-stock .price {display: block; font-weight: normal; padding: 0.2em 0 0 1.2em;}
-.qty-input{width: 52px;margin: 0.5em 0.5em 0 1.3em;}
+.qty-input{width: 52px;margin: 0.9em 0.5em 0 1.3em;}
+.suppliers-more-options {margin: 0 0em 0 1.3em;}
 
 
 /*main - content - bottom-nav*/
