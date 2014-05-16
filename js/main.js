@@ -44,4 +44,28 @@
 					$('.wrapper-dropdown').removeClass('active');
 				});
 
+				$('.filter-group ul').each(function() {
+
+        		var ullength = $(this).find('li').length;
+
+       			if (ullength > 4) {    	
+		            $('li', this).eq(3).nextAll().hide().addClass('toggleable');
+		        	$(this).append('<li class="more-options close"><a><span class="icon minus-plus-icon"></span>View More Option</a></li>');
+       			 }
+
+   				 });$
+
+				('.filter-group ul').on('click', '.more-options', function() {
+
+					if ($(this).hasClass('close')) {
+						$(this).html('<a><span class="icon minus-plus-icon"></span>View Less Option</a>');
+						$(this).removeClass('close').addClass('open');
+					} else {
+						$(this).html('<a><span class="icon minus-plus-icon"></span>View More Option</a>');
+						$(this).removeClass('open').addClass('close');
+
+					}
+
+        			$(this).siblings('li.toggleable').slideToggle();
+        		});
 			});
