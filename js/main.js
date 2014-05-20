@@ -68,4 +68,19 @@
 
         			$(this).siblings('li.toggleable').slideToggle();
         		});
+
+        		$('.full-info-item').each(function() {
+        			$(".full-info-content").hide();
+   				 });$
+
+				$('.full-info-header').on('click',  function() {
+					$(this).parent().find(".full-info-content:first").stop().slideToggle();
+					
+					if ($(this).parent().hasClass('close')) {
+						$(this).parent().removeClass('close').addClass('open');
+					} else {
+						$(this).parent().removeClass('open').addClass('close');
+					}
+				
+				});
 			});

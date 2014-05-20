@@ -112,7 +112,7 @@ input[type="radio"]:checked + label::before { background-position: 0px -53px; }
 
 .green-link.recommend-link { display: block; line-height: 14px; margin: 1em 0 1.2em; }
 
-.green-link.lease-link { margin: 0 5px 0 72px; }
+.green-link.lease-link { margin: 0 5px 0 65px; }
 
 /* header */
 #header { margin: 1em 0 0em 0; overflow: hidden; }
@@ -225,23 +225,29 @@ div.filter-group { padding: 1em 0.5em 1.5em 1em; border-bottom: 1px solid #e5e5e
 
 .product-addons .price { font-size: 14px; }
 
-.full-info-item { border: 1px solid #e5e5e5; margin: 0 0 10px 0; overflow: hidden; }
+.full-info { margin-bottom: 2em; }
+
+.full-info-item { border: 1px solid #e5e5e5; margin: 0 0 0.7142em 0; }
+
+.full-info-item:before, .full-info-item:after { content: " "; display: table; clear: both; }
 
 .full-info-header h3 { text-transform: uppercase; }
 
 .full-info-item.close .full-info-header { border-bottom: none; }
 
-.full-info-header { border-bottom: 1px solid #e5e5e5; padding: 12px 20px; }
+.full-info-header { border-bottom: 1px solid #e5e5e5; padding: 0.8571em 1.3em; cursor: pointer; }
 
-.full-info-content { padding: 0 20px; }
+.full-info-content { padding: 1.1em 1.3em; }
 
-.full-info-item .full-info-content .full-info-item { margin: 10px 0; }
+.full-info-item .full-info-content .full-info-item { margin: 0 0 0.7142em; }
 
-.full-info-item .full-info-content .full-info-item:first-child { margin-top: 20px; }
+.full-info-item .full-info-content .full-info-item:last-child { margin: 0; padding: 0; }
 
-.full-info-item .full-info-content .full-info-item:last-child { margin-bottom: 20px; }
+.tech-info-block { border-bottom: 1px solid #e5e5e5; padding: 0.7142em 0; }
 
-.tech-info-block { border-bottom: 1px solid #e5e5e5; padding: 13px 0; }
+.full-info-content .tech-info-block:first-child { padding: 0 0 0.7142em; }
+
+.full-info-content .tech-info-block:last-child { padding: 0.7142em 0 0px; }
 
 .tech-info-block .product-attr-item-name { width: 20em; font-weight: normal; }
 
@@ -309,7 +315,7 @@ span.star-icon.active { background-position: -18px -96px; }
 
 span.icon.full-info-icon { width: 19px; height: 19px; background-position: 0 -112px; }
 
-span.icon.full-info-icon.open { background-position: -24px -112px; }
+.full-info-item.open > .full-info-header > h3 > span.icon.full-info-icon { background-position: -24px -112px; }
 
 /* icons - hover*/
 #global-nav ul li.cart-holder:hover span.cart-icon { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
