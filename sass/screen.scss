@@ -38,7 +38,7 @@ input[type="checkbox"] + label::before {background-position: 0px 5px; }
 input[type="radio"] + label::before {background-position: 0px -34px;}
 input[type="checkbox"]:checked + label::before { background-position: 0px -14px;}
 input[type="radio"]:checked + label::before {background-position: 0px -53px;}
-label.select-label {position: absolute;width: 8px;height: 5px;right: 8px;display: block;top: 13px;background: url(../img/sprite.png) 0 -130px no-repeat;}
+label.select-label {position: absolute;width: 8px;height: 5px;right: 8px;display: block;top: 13px;background: url(../img/sprite.png) 0 -153px no-repeat;}
 ::-webkit-input-placeholder { color:    #282828;}
 :-moz-placeholder {color:    #282828;opacity:  1;}
 ::-moz-placeholder {color:    #282828;opacity:  1;}
@@ -200,8 +200,8 @@ span.gallery-icon {width: 9px;height: 9px;background-position: 0 -84px;margin: -
 span.list-icon {width: 9px;height: 9px;background-position: 0 -72px;margin: -2px 5px 0 0;}
 span.star-icon {width: 15px;height: 14px;background-position: 0 -96px;}
 span.star-icon.active {background-position: -18px -96px;}
-span.icon.full-info-icon {width: 19px;height: 19px;background-position: 0 -112px;}
-span.remove-icon {width: 14px;height: 14px;background-position: 0 -113px;}
+span.full-info-icon {width: 19px;height: 19px;background-position: 0 -112px;}
+span.remove-icon {width: 14px;height: 14px;background-position: 0 -136px;}
 .full-info-item.open > .full-info-header > h3 > span.icon.full-info-icon {background-position: -24px -112px;}
 /* icons - hover*/
 #global-nav ul li.cart-holder:hover span.cart-icon, #global-nav ul li.cart-holder:focus span.cart-icon, #global-nav ul li.cart-holder:focus span.cart-icon, #global-nav ul li.cart-holder.active span.cart-icon {@include opacity(1);}
