@@ -23,8 +23,8 @@ h2 {font-size: 1.2em;line-height: 1.3em;padding: 0 2em 0 0; }
 h4 {font-family: $font-main; font-weight: bold; font-size: 14px; margin: 0 0 0.2em 0;}
 /* general - input */
 input, textarea, keygen, select, button, isindex {padding: 0em 0.71em;border: 1px solid #dbdee4;outline: 0;
-font-size: 0.8571em;height: 30px;background: #fff;color: #282828;@include border-radius(3px); box-sizing: border-box;}
-textarea {padding: 0.71em 0.71em; background: #fff;height: 125px;resize: none; width: 100%;display: block;overflow: hidden;position: relative;}
+font-size: 0.8571em;height: 30px;background: #fff;color: #282828;@include border-radius(3px); box-sizing: border-box; @include box-shadow (none);}
+textarea {padding: 0.71em 0.71em; background: #fff;height: 100px;resize: none; width: 100%;display: block;overflow: hidden;position: relative;}
 input:hover, textarea:hover, select:hover {border-color: #c0c1c3;}
 input:active, textarea:active, select:active, input:focus, textarea:focus, select:focus {border-color: #8B8B8B;}
 select {-webkit-appearance: initial;moz-appearance: initial; -ms-appearance: initial; -o-appearance: initial;appearance: initial;}
@@ -53,8 +53,9 @@ label.select-label {position: absolute;width: 8px;height: 5px;right: 8px;display
 .form-group { position: relative; margin: 0;}
 /* general - btn */
 .icon {background: url(../img/sprite.png) 0 0 no-repeat; @include inline-block;}
-.btn {line-height: 30px; @include inline-block;font-size: 0.8571em;background: #8fc64a;color: #fff;border: none;@include border-radius(3px);padding: 0 1.1em 0 1.1em;cursor: pointer; font-family: $font-reg; @include transition-property(background);@include transition-duration(0.2s);@include transition-timing-function(ease-in)}
-.btn:hover, .btn:focus, .btn:active{background: #9fd957;}
+.btn {-webkit-appearance: initial;line-height: 30px; @include inline-block;font-size: 0.8571em;background: #8fc64a;color: #fff;border: none;@include border-radius(3px);padding: 0 1.1em 0 1.1em;cursor: pointer; font-family: $font-reg; @include transition-property(background);@include transition-duration(0.2s);@include transition-timing-function(ease-in)}
+.btn:hover, .btn:focus, .btn:active{background: #9fd957; color:#fff;}
+.grey-btn {background:#dbdee4; color: #676e79;}
 .link-btn {padding: 0em 1.1em 0em 1.1em;}
 .green-link {color: #8fc64a;font-size: 0.8571em;text-decoration: underline;}
 .green-link:hover, .green-link:active, .green-link:focus {color: #9fd957; text-decoration: none;}
@@ -180,15 +181,32 @@ div.filter-group {padding: 1em 0.5em 1.5em 1em;border-bottom: 1px solid #e5e5e5;
 .table-cart .qty-column {width:10%;}
 .table-cart .total-column {width:10%; text-align:right; padding: 0.7em 1.5em 0.7em 0.5em;}
 .table-cart select#shipping-country {width: 155px;}
-.table-cart tfoot td.order-total-column {
-    padding: 0.3em 0;
-}
-.table-cart tfoot td {
-    padding: 0 1.5em;
-}
+.table-cart tfoot td.order-total-column {padding: 0.3em 1.5em 0.3em 0em; text-align: right;}
+.table-cart tfoot td.order-price-column {padding: 0em 1.5em 0 2em;text-align:right;}
+.table-cart tfoot td {   padding: 0 1.5em;}
 .table-cart tfoot tr:first-child td {padding-top: 1em;}
 .table-cart tfoot tr:last-child td {padding-bottom: 1em;}
 .qty-cart {width: 60px;}
+.table-billing, .table-shipping {width: 575px;}
+.table-shipping {margin: 1.5em 0 0; display: none;}
+.table-billing thead tr th, .table-shipping thead tr th  {padding: 0.75em 0em 0.75em 1em;}
+.table-billing tbody tr td.name-column, .table-shipping tbody tr td.name-column {width: 115px;text-align: right;}
+.table-billing tbody tr, .table-shipping tbody tr {border: none;}
+.table-billing tbody tr td, .table-shipping tbody tr td  {padding: 0.75em 0em 0.75em 1em;}
+.table-billing tbody tr .input-column input, .table-shipping tbody tr .input-column input {width: 100%;}
+.table-billing tbody tr .input-column .form-group select,.table-shipping tbody tr .input-column .form-group select {width: 100%;}
+.table-billing tbody tr .input-column, .table-shipping tbody tr .input-column {padding: 0.75em 1.5em 0.75em 1em;}
+.table-billing tbody tr:first-child td,.table-shipping tbody tr:first-child td {padding-top: 1.5em;}
+.table-billing tbody tr:last-child td,.table-shipping tbody tr:last-child td {padding-bottom: 1.5em;}
+.table-order {width: 315px;}
+.table-order thead tr th, .table-order tbody tr td  {padding: 0.75em 1.5em;}
+.table-order tbody tr .qty-column {text-align: right;}
+.table-order tfoot tr td {padding: 0.3em 1.5em;text-align: right;}
+.table-order tfoot tr .order-qty-column {width: 78px;}
+.table-order tfoot tr:first-child td {padding-top: 1em;}
+.table-order tfoot tr:last-child td {padding-bottom: 1em;}
+.payment-method {margin: 2em 0;}
+.payment-method span.title {margin:0 3em 0 0;}
 
 /* icons */
 .search-icon {width: 12px;height: 12px;position: absolute;right: 7px;top: 9px;cursor: pointer;display: block;border: none;}

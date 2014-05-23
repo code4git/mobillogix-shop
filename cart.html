@@ -91,9 +91,9 @@
 						</tbody>
 						<tfoot>
 							<tr>
-								<td colspan="4">Calculate Shipping</td>
+								<td colspan="4"><h3>Calculate Shipping</h3></td>
 								<td class="order-total-column" colspan="2" >Shipping and Handling:</td>
-								<td class="price-column" colspan="1" >Free</td>
+								<td class="order-price-column" colspan="1" >Free</td>
 							</tr>
 							<tr>
 								<td colspan="4" rowspan="2">
@@ -354,32 +354,27 @@
 									</div>
 									<input id="shipping-state" type="text" name="shipping-state" value="" size="23" class="customize-input" placeholder="State/Country">
 									<input id="shipping-state" type="text" name="shipping-state" value="" size="15" class="customize-input" placeholder="Postcode/Zip">
-									<input type="submit" name="action-bottom-sumbit" id="action-bottom-sumbit" class="btn  action" value="Update">
+									<input type="submit" name="update-shipping" id="update-shipping" class="btn grey-btn" value="Update">
 								</td>
 								<td class="order-total-column" colspan="2" >Cart Subtotal:</td>
-								<td class="price-column" colspan="1" >$1049.95</td>
+								<td class="order-price-column" colspan="1" >$1049.95</td>
 							</tr>
 							<tr class="total-row">
-								<td class="order-total-column" colspan="2" >Total:</td>
-								<td class="price-column" colspan="1" >$1002.94</td>
+								<td class="order-total-column bold" colspan="2" >Order Total:</td>
+								<td class="order-price-column bold" colspan="1" >$1002.94</td>
 							</tr>
 						</tfoot>
 					</table>
 				</div>
-				<div class="bulk-actions float-left" style="margin-top: 2em;">
-						<div class="form-group inline">
-								<select name="action-bottom" id="action-bottom">
-									<option value="0" selected="selected">Bulk Actions</option>
-									<option value="edit">Edit</option>
-									<option value="trash">Move to Trash</option>
-								</select>
-								<label for="action-bottom" class="select-label"></label>
-							</div>
-							<input type="submit" name="action-bottom-sumbit" id="action-bottom-sumbit" class="btn  action" value="Apply Coupon">
-						</div>
-				<div class="float-right" style="margin-top: 2em;">
-					<input type="submit" name="action-bottom-sumbit" id="action-bottom-sumbit" class="btn action" value="Update Cart">
-					<input type="submit" name="action-bottom-sumbit" id="action-bottom-sumbit" class="btn action" value="Proceed to Checkout">
+				<div class="row">
+					<div class="float-left" style="margin-top: 2em;">
+						<input id="coupon-code" type="text" name="coupon-code" value="" size="13" class="customize-input" placeholder="Coupon Code">
+						<input type="submit" name="apply-coupon" id="apply-coupon" class="btn  grey-btn" value="Apply Coupon">
+					</div>
+					<div class="float-right" style="margin-top: 2em;">
+						<input type="submit" name="update-cart" id="update-cart" class="btn grey-btn" value="Update Cart">
+						<input type="submit" name="sumbit-order" id="sumbit-order" class="btn" value="Proceed to Checkout" onclick="javascript: location.href='checkout.html'">
+					</div>
 				</div>
 		</div>
 	</div>

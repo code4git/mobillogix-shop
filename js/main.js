@@ -83,4 +83,8 @@
 					}
 				
 				});
+				$('[name=shipping-dif]').click(function () {
+    				$(".table-shipping").toggle(this.checked);
+				});
+				
 			});
