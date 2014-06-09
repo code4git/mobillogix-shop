@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<title>Taas</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="css/screen.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	<!--[if lt IE 9]>
+		<script src="js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="wraper">
+		<header id="header">
+			<div id="logo">
+				<a href="">
+					<img src="img/logo.jpg" alt="Site Logo">
+				</a>
+			</div>
+			<div id="header-search">
+				<div class="form-group inline">
+					<form id="search-form">
+						<input type="search" name="product-search" id="product-search" class="search-wide"  value=""  placeholder="Search Product">
+						<button type="submit" class="icon search-icon"></button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<nav id="global-nav">
+			<ul>
+				<li><a href="products.html">Products</a></li>
+				<li class="active"><a href="taas.html">Tass</a></li>
+				<li><a href="">Byod</a></li>
+				<li class="cart-holder"><a href="cart.html"><span class="icon cart-icon"></span>Cart <span id="cart-qnt"> (4)</span></a></li>
+			</ul>
+		</nav>
+		<div id="main">
+			<div id="content" class="full-width">
+				<div class="row">
+					<div class="page-header">
+						<img src="img/taas-icon.png">
+						<div class="page-title">
+							<h2>Tablet as a Service</h2>
+							<p class="powered-by">Powered by launchpad</p>
+						</div>
+					</div>
+				</div>
+				<div class="block-separator"></div>
+				<div class="solution-holder">
+					<form>
+						<div id="taas-steps" class="solution-steps">
+					        <div id="step-1" class="solution-step active" data-nav-title="Purchase Type">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">1</div>
+					        			<h2>Select Purchase Type</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Is this a business purchase or a consumer purchase?</p>
+					        			<div class="option-box wide">
+											<input type="radio" name="step-1-option" id="step-1-option-1" value="Business purchase">
+											<label for="step-1-option-1">
+												<div class="option-title">Business purchase</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/option1-1.png">
+												</div>
+												<div class="option-desc">Maecenas vel porta mi, ac rhoncus diam.</div>
+												<a class="option-more" href=""><span class="more">Learn more</span></a>
+											</label>
+										</div>
+										<div class="option-box wide">
+											<input type="radio" name="step-1-option" id="step-1-option-2" value="Consumer purchase">
+											<label for="step-1-option-2">
+												<div class="option-title">Consumer purchase</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/option1-2.png">
+												</div>
+												<div class="option-desc">Maecenas vel porta mi, ac rhoncus diam.</div>
+												<a class="option-more" href=""><span class="more">Learn more</span></a>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand collapsed">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-2" class="solution-step" data-nav-title="Tablet">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">2</div>
+					        			<h2>Select Tablet</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Start by choosing your Tablet</p>
+					        			<div class="option-box">
+											<input type="checkbox" name="step-2-option" id="step-2-option-1" value="Samsung Gaalaxy Note® 10.1 ">
+											<label for="step-2-option-1">
+												<div class="option-title">Samsung Gaalaxy Note® 10.1 </div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/note.jpg">
+												</div>
+												<div class="option-price"><span class="price">$350.00</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-2-option" id="step-2-option-2" value="Samsung Galaxy Tab® 3 Lite 7.0 8GB, White">
+											<label for="step-2-option-2">
+												<div class="option-title">Samsung Galaxy Tab® 3 Lite 7.0 8GB, White</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/tab-lite.jpg">
+												</div>
+												<div class="option-price"><span class="price">$149.00</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-2-option" id="step-2-option-3" value="Samsung Galaxy Tab® Pro 10.1 16GB (Wi-Fi), White">
+											<label for="step-2-option-3">
+												<div class="option-title">Samsung Galaxy Tab® Pro 10.1 16GB (Wi-Fi), White</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/tab-pro.jpg">
+												</div>
+												<div class="option-price"><span class="price">$449.00</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-2-option" id="step-2-option-4" value="Samsung Tab 3">
+											<label for="step-2-option-3">
+												<div class="option-title">Samsung Tab 3</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/tab-3.jpg">
+												</div>
+												<div class="option-price"><span class="price">$300.00</span></div>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-3" class="solution-step" data-nav-title="Connected or WiFi">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">3</div>
+					        			<h2>Select Connected or WiFi</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Next, pick your plan</p>
+					        			<div class="option-box wide">
+											<input type="radio" name="step-3-option" id="step-3-option-1" value="WiFi Only">
+											<label for="step-3-option-1">
+												<div class="option-title">WiFi Only</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/option3-1.png">
+												</div>
+												<div class="option-desc">Maecenas vel porta mi, ac rhoncus diam.</div>
+												<a class="option-more" href=""><span class="more">Learn more</span></a>
+											</label>
+										</div>
+										<div class="option-box wide">
+											<input type="radio" name="step-3-option" id="step-3-option-2" value="Connected">
+											<label for="step-3-option-2">
+												<div class="option-title">Connected</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/option3-2.png">
+												</div>
+												<div class="option-desc">Maecenas vel porta mi, ac rhoncus diam.</div>
+												<a class="option-more" href=""><span class="more">Learn more</span></a>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title ">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step ">
+													<div class="sum-step-title">Tablet</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Samsung Galaxy Note® 10.1</div>
+														<div class="sum-step-detail-item">Samsung Galaxy Tab® 3 Lite 7.0 </div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-4" class="solution-step" data-nav-title="Carrier & Data Plan">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">4</div>
+					        			<h2>Select Carrier & Data Plan</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Please choose you carrier and data plan</p>
+					        			<div class="row">
+						        			<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-1" value="1GB Verizon Data ">
+												<label for="step-4-option-1">
+													<div class="option-title">1GB Verizon Data </div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/verizon.png">
+													</div>
+													<div class="option-price"><span class="price">$25.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-2" value="3GB Verizon Data">
+												<label for="step-4-option-2">
+													<div class="option-title">3GB Verizon Data </div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/verizon.png">
+													</div>
+													<div class="option-price"><span class="price">$35.00</span></div>
+												</label>
+											</div>
+										</div>
+										<div class="block-separator"></div>
+										<div class="row">
+						        			<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-3" value="1GB AT&T Data ">
+												<label for="step-4-option-3">
+													<div class="option-title">1GB AT&T Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/att.png">
+													</div>
+													<div class="option-price"><span class="price">$25.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-4" value="3GB AT&T Data ">
+												<label for="step-4-option-4">
+													<div class="option-title">3GB AT&T Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/att.png">
+													</div>
+													<div class="option-price"><span class="price">$35.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-5" value="5GB AT&T Data ">
+												<label for="step-4-option-5">
+													<div class="option-title">5GB AT&T Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/att.png">
+													</div>
+													<div class="option-price"><span class="price">$45.00</span></div>
+												</label>
+											</div>
+										</div>
+										<div class="block-separator"></div>
+										<div class="row">
+						        			<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-6" value="1GB T-Mobile  Data ">
+												<label for="step-4-option-6">
+													<div class="option-title">1GB T-Mobile  Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/tmobile.png">
+													</div>
+													<div class="option-price"><span class="price">$25.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-7" value="3GB T-Mobile  Data ">
+												<label for="step-4-option-7">
+													<div class="option-title">3GB T-Mobile  Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/tmobile.png">
+													</div>
+													<div class="option-price"><span class="price">$35.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-8" value="5GB T-Mobile  Data ">
+												<label for="step-4-option-8">
+													<div class="option-title">5GB T-Mobile  Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/tmobile.png">
+													</div>
+													<div class="option-price"><span class="price">$45.00</span></div>
+												</label>
+											</div>
+										</div>
+										<div class="block-separator"></div>
+										<div class="row">
+						        			<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-9" value="1GB Sprint Data ">
+												<label for="step-4-option-9">
+													<div class="option-title">1GB Sprint Data</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/sprint.png">
+													</div>
+													<div class="option-price"><span class="price">$25.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-10" value="3GB Sprint Data">
+												<label for="step-4-option-10">
+													<div class="option-title">3GB SprintData</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/sprint.png">
+													</div>
+													<div class="option-price"><span class="price">$35.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-11" value="5GB Sprint Data ">
+												<label for="step-4-option-11">
+													<div class="option-title">5GB SprintData</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/sprint.png">
+													</div>
+													<div class="option-price"><span class="price">$45.00</span></div>
+												</label>
+											</div>
+										</div>
+										<div class="block-separator"></div>
+										<div class="row">
+						        			<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-12" value="">
+												<label for="step-4-option-12">
+													<div class="option-title">SAMS-net 3GB</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/sams.png">
+													</div>
+													<div class="option-price"><span class="price">$25.00</span></div>
+												</label>
+											</div>
+											<div class="option-box">
+												<input type="radio" name="step-4-option" id="step-4-option-13" value="SAMS-net 3GB">
+												<label for="step-4-option-13">
+													<div class="option-title">SAMS-net 5GB</div>
+													<div class="option-img grayscale">
+														<img src="img/step_img/sams.png">
+													</div>
+													<div class="option-price"><span class="price">$35.00</span></div>
+												</label>
+											</div>
+										</div>
+										
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Tablet</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Samsung Galaxy Note® 10.1</div>
+														<div class="sum-step-detail-item">Samsung Galaxy Tab® 3 Lite 7.0 </div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step">
+													<div class="sum-step-title">Connected or Wifi</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Wifi Only</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-5" class="solution-step" data-nav-title="Accessories">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">5</div>
+					        			<h2>Select Accessories</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Please choose which accessories you would like</p>
+					        			<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-1" value="Samsung Gear">
+											<label for="step-5-option-1">
+												<div class="option-title">Samsung Gear</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/samsung-gear.jpg">
+												</div>
+												<div class="option-price"><span class="price">$300.00</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-2" value="Waterproof Case">
+											<label for="step-5-option-2">
+												<div class="option-title">Waterproof Case</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/waterproff.jpg">
+												</div>
+												<div class="option-price"><span class="price">$59.99</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-3" value="Bluetooth Keyboard">
+											<label for="step-5-option-3">
+												<div class="option-title">Bluetooth Keyboard</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/keyboard.jpg">
+												</div>
+												<div class="option-price"><span class="price">$79.99</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-4" value="Anti-Microbial Case">
+											<label for="step-5-option-4">
+												<div class="option-title">Anti-Microbial Case</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/antimicrob.jpg">
+												</div>
+												<div class="option-price"><span class="price">$69.99</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-5" value="Case 1">
+											<label for="step-5-option-5">
+												<div class="option-title">Case 1</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/case-1.jpg">
+												</div>
+												<div class="option-price"><span class="price">$39.99</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-6" value="Case 2">
+											<label for="step-5-option-6">
+												<div class="option-title">Case 2</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/case-2.jpg">
+												</div>
+												<div class="option-price"><span class="price">$39.99</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-5-option" id="step-5-option-7" value="Case 3">
+											<label for="step-5-option-7">
+												<div class="option-title">Case 3</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/case-3.jpg">
+												</div>
+												<div class="option-price"><span class="price">$39.99</span></div>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Tablet</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Samsung Galaxy Note® 10.1</div>
+														<div class="sum-step-detail-item">Samsung Galaxy Tab® 3 Lite 7.0 </div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Connected or Wifi</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Wifi Only</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step" >
+													<div class="sum-step-title">Carrier & Data Plan</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">3GB Verizon Data</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-6" class="solution-step" data-nav-title="Insurance/Warranty">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">6</div>
+					        			<h2>Select Insurance/Warranty</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Choose Insurance / Warranty</p>
+					        			<div class="option-box wide">
+											<input type="radio" name="step-6-option" id="step-6-option-1" value="Asurion">
+											<label for="step-6-option-1">
+												<div class="option-title">Asurion</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/asurion.jpg">
+												</div>
+												<div class="option-price"><span class="price">$5.00</span></div>
+											</label>
+										</div>
+										<div class="option-box wide">
+											<input type="radio" name="step-6-option" id="step-6-option-2" value="Samsung Care">
+											<label for="step-6-option-2">
+												<div class="option-title">Samsung Care</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/samsung.jpg">
+												</div>
+												<div class="option-price"><span class="price">$5.00</span></div>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Tablet</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Samsung Galaxy Note® 10.1</div>
+														<div class="sum-step-detail-item">Samsung Galaxy Tab® 3 Lite 7.0 </div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Connected or Wifi</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Wifi Only</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Carrier & Data Plan</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">3GB Verizon Data</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step" >
+													<div class="sum-step-title">Accessories</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">Waterproof Case</div>
+														<div class="sum-step-detail-item">Case 3</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-7" class="solution-step" data-nav-title="Software">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">7</div>
+					        			<h2>Select Software</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Now, pick you applications</p>
+					        			<div class="option-box wide">
+											<input type="radio" name="step-7-option" id="step-7-option-1" value="Mobility Management">
+											<label for="step-7-option-1">
+												<div class="option-title">Mobility Management</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/mobility.jpg">
+												</div>
+												<div class="option-price"><span class="price">$5.00</span></div>
+											</label>
+										</div>
+										<div class="option-box wide">
+											<input type="radio" name="step-7-option" id="step-7-option-2" value="Zula">
+											<label for="step-7-option-2">
+												<div class="option-title">Zula</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/zula.jpg">
+												</div>
+												<div class="option-price"><span class="price">$10.00</span></div>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Tablet</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Samsung Galaxy Note® 10.1</div>
+														<div class="sum-step-detail-item">Samsung Galaxy Tab® 3 Lite 7.0 </div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Connected or Wifi</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Wifi Only</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Carrier & Data Plan</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">3GB Verizon Data</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Accessories</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">Waterproof Case</div>
+														<div class="sum-step-detail-item">Case 3</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step" >
+													<div class="sum-step-title">Insurance/Warranty</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">Samsung Care</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-8" class="solution-step" data-nav-title="Services">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">8</div>
+					        			<h2>Select Services</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Select the support services you would like</p>
+					        			<div class="option-box">
+											<input type="checkbox" name="step-8-option" id="step-8-option-1" value="Managed Mobilittttty – 24/7 ">
+											<label for="step-8-option-1">
+												<div class="option-title">Managed Mobility – 24/7 </div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/24-7.png">
+												</div>
+												<div class="option-price"><span class="price">Included</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-8-option" id="step-8-option-2" value="Managed Mobility – 8am-5pm (Central)  ">
+											<label for="step-8-option-2">
+												<div class="option-title">Managed Mobility – <br>8am-5pm (Central) </div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/8-5.png">
+												</div>
+												<div class="option-price"><span class="price">Included</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-8-option" id="step-8-option-3" value="Configuration Services ">
+											<label for="step-8-option-3">
+												<div class="option-title">Configuration Services</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/config.png">
+												</div>
+												<div class="option-price"><span class="price">Included</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-8-option" id="step-8-option-4" value="Managed Mobility – International ">
+											<label for="step-8-option-4">
+												<div class="option-title">Managed Mobility – International</div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/international.png">
+												</div>
+												<div class="option-price"><span class="price">Included</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-8-option" id="step-8-option-5" value="Self-Service ">
+											<label for="step-8-option-5">
+												<div class="option-title">Self-Service </div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/self-service.png">
+												</div>
+												<div class="option-price"><span class="price">Included</span></div>
+											</label>
+										</div>
+										<div class="option-box">
+											<input type="checkbox" name="step-8-option" id="step-8-option-6" value="Self-Service/Managed ">
+											<label for="step-8-option-6">
+												<div class="option-title">Self-Service/Managed </div>
+												<div class="option-img grayscale">
+													<img src="img/step_img/self-service-manage.png">
+												</div>
+												<div class="option-price"><span class="price">Included</span></div>
+											</label>
+										</div>
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Summary</span>
+	    										<span class="summary-expand">Expand all</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Tablet</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Samsung Galaxy Note® 10.1</div>
+														<div class="sum-step-detail-item">Samsung Galaxy Tab® 3 Lite 7.0 </div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Connected or Wifi</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Wifi Only</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Carrier & Data Plan</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">3GB Verizon Data</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Accessories</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">Waterproof Case</div>
+														<div class="sum-step-detail-item">Case 3</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step collapsed" >
+													<div class="sum-step-title">Insurance/Warranty</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">Samsung Care</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												<div class="summary-step" >
+													<div class="sum-step-title">Software</div>
+													<div class="sum-step-detail">
+														<div class="sum-step-detail-item">Zula</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        <div id="step-9" class="solution-step review-step active" data-nav-title="Review">
+					        	<div class="step-header">
+					        		<div class="step-title">
+					        			<div class="step-number">9</div>
+					        			<h2>Review</h2>
+					        		</div>
+					        		<div class="step-nav">
+					        		</div>
+					        	</div>
+					        	<div class="block-separator"></div>
+					        	<div class="step-content">
+					        		<div class="step-options">
+					        			<p class="step-desc">Full Review your purchase</p>
+					        	
+					        		</div>
+					        		<div class="step-sidebar">
+					        			<div class="progressbar-wrapper">
+	      								  <p class="progressbar-title"><span class="step-num"></span><span class="step-percent"></span></p>
+											<div class="progressbar">
+										    	<div class="percentbar"></div>
+										    </div>
+	    								</div>
+	    								<div class="solution-summary">
+	    									<div class="summary-header">
+	    										<span class="summary-title">Order Details</span>
+	    									</div>
+											<div class="summary-steps">
+												<div class="summary-step collapsed">
+													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-detail ">
+														<div class="sum-step-detail-item">Business purchase</div>
+													</div>
+													<span class="icon sum-collapse-icon"></span>
+												</div>
+												
+											</div>
+	    								</div>
+					        		</div>
+					        	</div>
+					        </div>
+					        
+					         
+					    </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>

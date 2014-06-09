@@ -86,5 +86,76 @@
 				$('[name=shipping-dif]').click(function () {
     				$(".table-shipping").toggle(this.checked);
 				});
+
+				var totalSize = $('body').find(".solution-step").length;
 				
-			});
+				$(".solution-step").each(function(i){
+					
+			  		if (i != 0) {
+			      		prev = i;
+		   		  		$(this).find(".step-nav").append("<a href='#' class='btn grey-btn prev-step mover' rel='" + prev + "'>"+$('#step-'+prev).attr('data-nav-title')+"</a>");
+			  		}
+			  		if (i != totalSize-1) {
+			      		next = i + 2;
+		   		  		$(this).find(".step-nav").append("<a href='#' class='btn next-step mover' rel='" + next + "'>"+$('#step-'+next).attr('data-nav-title')+"</a>");
+			  		}
+			  		var current_step = i + 1;
+			  		var current_percent = current_step == totalSize ? '99%' : Math.round((current_step/totalSize)*100);
+
+			  		$(this).find('.step-num').html('Step '+current_step+' of '+totalSize);
+			  		$(this).find('.percentbar').css('width', current_percent + '%');
+			  		$(this).find('.step-percent').html(current_percent + '% completed');
+				});
+	
+				$('.next-step, .prev-step').on('click', function(e)  {
+		           $('#step-' + $(this).attr("rel")).show().siblings().hide();
+		           $(this).parent('.solution-step').addClass('active').siblings().removeClass('active');
+		           e.preventDefault();
+		       	});
+		       	trigCollapseAll();
+				$('.solution-step').each(function() {
+					if ($(this).find('.summary-step').hasClass('collapsed')) {
+						$(this).find('.summary-step.collapsed').find('.sum-step-detail').hide();
+					}
+				});
+
+				$('.solution-step').on( 'click', '.summary-expand', function( event ) {
+					if($(this).hasClass('collapsed')) {
+						$(this).removeClass('collapsed').text('Collapse all');
+						$(this).parents('.solution-summary').find('.sum-step-detail').slideDown(200, function() {
+						$(this).parents('.summary-step').removeClass('collapsed');
+						});
+					} else {
+						$(this).addClass('collapsed').text('Expand all');
+						$(this).parents('.solution-summary').find('.sum-step-detail').slideUp(200, function() {
+						$(this).parents('.summary-step').addClass('collapsed');
+						});
+					}
+				});
+
+				$('.solution-step').on('click','.sum-step-title, .sum-collapse-icon', function() {
+					if($(this).parents('.summary-step').hasClass('collapsed')) {					
+						$(this).parents('.summary-step').find('.sum-step-detail').slideDown(200, function() {
+							$(this).parents('.summary-step').removeClass('collapsed');
+							trigCollapseAll();
+						});
+					} else {					
+						$(this).parents('.summary-step').find('.sum-step-detail').slideUp(200, function() {
+							$(this).parents('.summary-step').addClass('collapsed');
+							trigCollapseAll();
+						});
+					
+					}
+					
+				});
+				function trigCollapseAll() {
+						$('.solution-step').each(function() {
+						if($(this).find('.summary-step').hasClass('collapsed')) {
+							$(this).find('.summary-expand').addClass('collapsed').text('Expand all');
+						} else {
+							$(this).find('.summary-expand').removeClass('collapsed').text('Collapse all');
+						}
+					});
+					}
+
+});
