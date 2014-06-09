@@ -150,7 +150,7 @@
 										</div>
 										<div class="option-box">
 											<input type="checkbox" name="step-2-option" id="step-2-option-4" value="Samsung Tab 3">
-											<label for="step-2-option-3">
+											<label for="step-2-option-4">
 												<div class="option-title">Samsung Tab 3</div>
 												<div class="option-img grayscale">
 													<img src="img/step_img/tab-3.jpg">
@@ -911,7 +911,7 @@
 					        		</div>
 					        	</div>
 					        </div>
-					        <div id="step-9" class="solution-step review-step active" data-nav-title="Review">
+					        <div id="step-9" class="solution-step review-step" data-nav-title="Review">
 					        	<div class="step-header">
 					        		<div class="step-title">
 					        			<div class="step-number">9</div>
@@ -924,7 +924,75 @@
 					        	<div class="step-content">
 					        		<div class="step-options">
 					        			<p class="step-desc">Full Review your purchase</p>
-					        	
+										<div class="review">
+											<div class="review-row">
+												<div class="review-title">
+													<h5>Purchase Type</h5>
+												</div>
+												<div class="review-desc">
+													<div>Consumer Purchase</div>
+												</div>
+											</div>
+											<div class="review-row bg">
+												<div class="review-title">
+													<h5>Tablet</h5>
+												</div>
+												<div class="review-desc">
+													<div>Samsung Galaxy Tab® 3 Lite 7.0 8GB, White</div>
+													<div>Samsung Gaalaxy Note® 10.1</div>
+												</div>
+											</div>
+											<div class="review-row">
+												<div class="review-title">
+													<h5>Connected or WiFi</h5>
+												</div>
+												<div class="review-desc">
+													<div>Connected</div>
+												</div>
+											</div>
+											<div class="review-row bg">
+												<div class="review-title">
+													<h5>Carrier & Data Plan</h5>
+												</div>
+												<div class="review-desc">
+													<div>3GB Verizon Date</div>
+												</div>
+											</div>
+											<div class="review-row">
+												<div class="review-title">
+													<h5>Carrier & Data Plan</h5>
+												</div>
+												<div class="review-desc">
+													<div>Waterproof Case</div>
+													<div>Case 3</div>	
+												</div>
+											</div>
+											<div class="review-row bg">
+												<div class="review-title">
+													<h5>Insurance/Warranty</h5>
+												</div>
+												<div class="review-desc">
+													<div>Samsung Care</div>
+												</div>
+											</div>
+											<div class="review-row">
+												<div class="review-title">
+													<h5>Software</h5>
+												</div>
+												<div class="review-desc">
+													<div>Zula</div>
+												</div>
+											</div>
+											<div class="review-row bg">
+												<div class="review-title">
+													<h5>Services</h5>
+												</div>
+												<div class="review-desc">
+													<div>Managed Mobility – 8am-5pm (Central)</div>
+													<div>Self-Service / Managed </div>	
+												</div>
+											</div>
+										</div>
 					        		</div>
 					        		<div class="step-sidebar">
 					        			<div class="progressbar-wrapper">
@@ -933,28 +1001,91 @@
 										    	<div class="percentbar"></div>
 										    </div>
 	    								</div>
-	    								<div class="solution-summary">
+	    								<div class="solution-summary order-summary">
 	    									<div class="summary-header">
 	    										<span class="summary-title">Order Details</span>
 	    									</div>
 											<div class="summary-steps">
+												<div class="summary-step">
+													<div class="sum-step-title">Select Quantity:
+														<span class="qtn order-span">1</span>
+													</div>
+													<span class="icon qtn-plus-icon"></span>
+													<span class="icon qtn-minus-icon"></span>
+												</div>
 												<div class="summary-step collapsed">
-													<div class="sum-step-title">Purchase Type</div>
+													<div class="sum-step-title">Select the term:
+														<span class="term order-span">12 months</span>
+													</div>
 													<div class="sum-step-detail ">
-														<div class="sum-step-detail-item">Business purchase</div>
+														<div class="terms-list">
+															<div class="active" data-term="12">12 months</div>
+															<div data-term="18">18 months</div>
+															<div data-term="24">24 months</div>
+															<div data-term="36">36 months</div>
+															<div data-term="60">60 months</div>
+														</div>
 													</div>
 													<span class="icon sum-collapse-icon"></span>
 												</div>
-												
+												<div class="summary-step">
+													<div class="sum-step-title">Total:
+														<span class="total order-span"> $1000</span>
+													</div>
+												</div>
 											</div>
 	    								</div>
+										<input type="submit" name="solution-to-cart" id="solution-to-cart" class="btn" value="Add to Cart">
 					        		</div>
 					        	</div>
-					        </div>
-					        
-					         
+					        </div>				         
 					    </div>
 					</form>
+					<div id="product-tabs" class="tabs">
+						<ul class="tab-links">
+							<li class="active"><a href="#desc-tab">Description</a></li>
+							<li><a href="#reviews-tab">Reviews (0)</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="desc-tab" class="tab active">
+								<h5>Product Description</h5>
+								<p>Tablet as a Service – Bundled Tablet Solutions for SMB to Enterprise Clients</p>
+							</div>
+							<div id="reviews-tab" class="tab">
+								<h5>Reviews</h5>
+								<p class="noreview">There are no reviews yet.</p>
+								<div class="review-form">
+									<form>
+										<img class="first-review" src="img/first-review.png">
+										<div class="review-rating">
+											<h5>Your Rating</h5>
+											<div class="stars">
+												<a class="star-holder" data-star="1"><span class="icon star-icon one"></span></a>
+												<a class="star-holder" data-star="2"><span class="icon star-icon two"></span></a>
+												<a class="star-holder" data-star="3"><span class="icon star-icon three"></span></a>
+												<a class="star-holder" data-star="4"><span class="icon star-icon four"></span></a>
+												<a class="star-holder" data-star="5"><span class="icon star-icon five"></span></a>
+											</div>
+											<select name="rating" id="rating" style="display: none;">
+												<option value="5">Perfect</option>
+												<option value="4">Good</option>
+												<option value="3">Average</option>
+												<option value="2">Not that bad</option>
+												<option value="1">Very Poor</option>
+											</select>
+										</div>
+										<div class="review-mesage">
+											<h5>Your Review</h5>
+											<textarea id="review-text" name="review-text" placeholder="Type here your message"></textarea>
+										</div>
+										<input type="submit" name="submit-review" id="submit-review" class="btn" value="Submit">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="block-separator"></div>
+					<a href="#" class="go-top">Go to Top</a>
 				</div>
 			</div>
 		</div>

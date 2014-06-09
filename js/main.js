@@ -87,7 +87,7 @@
     				$(".table-shipping").toggle(this.checked);
 				});
 
-				var totalSize = $('body').find(".solution-step").length;
+				var totalSize = $(".solution-step").size();
 				
 
 				$(".solution-step").each(function(i){
@@ -158,8 +158,40 @@
 						}
 					});
 					}
-					$('select').customSelect();
-				$('.add-to-cart').click(function (event) {
+				$('.order-summary').on('click','.terms-list div', function() {
+					$('.terms-list div').removeClass('active');
+					$(this).addClass('active');
+					var termvalue = $(this).attr('data-term');
+					$(this).parents('.summary-step').find('.term').html(termvalue+ ' months');
+				});
+				$('.order-summary').on('click','.qtn-plus-icon, .qtn-minus-icon', function(event) {
+					var num = parseInt($.trim($(this).parents('.summary-step').find('.qtn').html()));
+					
+					var target = $(event.target);
+					if (target.is('.qtn-plus-icon')) {
+						$(this).parents('.summary-step').find('.qtn').html(++num);
+					} else {
+						if (num < 2) {return false;	}
+						$(this).parents('.summary-step').find('.qtn').html(--num);
+					}
+				});
+				$('.tabs .tab-links a').on('click', function(e)  {
+					var currentAttrValue = $(this).attr('href');
+					$('.tabs ' + currentAttrValue).show().siblings().hide();
+					$(this).parent('li').addClass('active').siblings().removeClass('active');
+					e.preventDefault();
+				});
+				$('.review-form').on('click','.star-holder', function() {
+					$('.star-holder').removeClass('active');
+					var starvalue = $(this).attr('data-star');
+					$(this).parents('.review-rating').find('#rating').val(starvalue);
+					$(this).addClass('active');
+				});
+					
+				$('select').each(function() {
+					$(this).customSelect();
+				});
+						$('.add-to-cart').click(function (event) {
 					 event.preventDefault();
 					$(this).addClass("added");
 					$(this).val("Item added");
