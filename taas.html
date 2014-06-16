@@ -11,7 +11,7 @@
 		<script src="js/html5.js" type="text/javascript"></script>
 	<![endif]-->
 </head>
-<body>
+<body id="taas-page">
 	<div id="wraper">
 		<header id="header">
 			<div id="logo">
@@ -19,6 +19,7 @@
 					<img src="img/logo.jpg" alt="Site Logo">
 				</a>
 			</div>
+			<a href="#" class="link-nav" title="Show navigation"></a>
 			<div id="header-search">
 				<div class="form-group inline">
 					<form id="search-form">
@@ -125,7 +126,10 @@
 												<div class="option-img grayscale">
 													<img src="img/step_img/note.jpg">
 												</div>
-												<div class="option-price"><span class="price">$350.00</span></div>
+												<div class="option-price">
+												
+													<span class="price">$350.00</span>
+												</div>
 											</label>
 										</div>
 										<div class="option-box">
@@ -135,7 +139,9 @@
 												<div class="option-img grayscale">
 													<img src="img/step_img/tab-lite.jpg">
 												</div>
-												<div class="option-price"><span class="price">$149.00</span></div>
+												<div class="option-price">
+													<a class="popup-link-1 option-more" href=""><span class="more">Learn more</span></a>
+													<span class="price">$149.00</span></div>
 											</label>
 										</div>
 										<div class="option-box">
@@ -145,7 +151,10 @@
 												<div class="option-img grayscale">
 													<img src="img/step_img/tab-pro.jpg">
 												</div>
-												<div class="option-price"><span class="price">$449.00</span></div>
+												<div class="option-price">
+													<a class="popup-link-1 option-more" href=""><span class="more">Learn more</span></a>
+													<span class="price">$449.00</span>
+												</div>
 											</label>
 										</div>
 										<div class="option-box">
@@ -155,7 +164,7 @@
 												<div class="option-img grayscale">
 													<img src="img/step_img/tab-3.jpg">
 												</div>
-												<div class="option-price"><span class="price">$300.00</span></div>
+												<div class="option-price"><a class="popup-link-1 option-more"><span class="more">Learn more</span></a>	<span class="price">$300.00</span></div>
 											</label>
 										</div>
 					        		</div>
@@ -1089,5 +1098,63 @@
 				</div>
 			</div>
 		</div>
+	
+
+		<div class="popup" id="popup-1">
+			<span class="close icon remove-icon"></span>
+			<div class="arrow"></div>
+			<div class="popup-content">
+				<div class="row">
+					<div class="popup-img">
+						<img src="img/samsung.jpg">
+					</div>
+					<div class="popup-info">
+						<div class="popup-title">
+							<h3>Samsung Galaxy Tab 3 Lite 7.0 8GB, White White White  </h3>
+				
+						</div>
+						<div class="popup-text">
+							<p>
+							Access to over a million apps and games from the Google play store
+							<br>Perfect for browsing web, watching videos, and reading books
+							<br>Light, slim design that fits perfectly in your hand
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<table class="table-distrib">
+						<tbody>
+							<tr>
+								<td class="distributor">MSRP</td>
+								<td class="available">&nbsp;</td>
+								<td class="price">$530.99</td>
+							</tr>
+							<tr>
+								<td class="distributor">
+									<div class="form-group inline group-radio">
+										<input id="distrib-radio-1" name="distrib-radio" class="radio" type="radio" value="Ingram-micro">
+										<label for="distrib-radio-1" class="radio-label">Ingram Micro</label>
+									</div>
+								</td>
+								<td class="available">49 available</td>
+								<td class="price">$340.99</td>
+							</tr>
+							<tr>
+								<td class="distributor">
+									<div class="form-group inline group-radio">
+										<input id="distrib-radio-2" name="distrib-radio" class="radio" type="radio" value="Tech-data">
+										<label for="distrib-radio-2" class="radio-label">Tech data</label>
+									</div>
+								</td>
+								<td class="available">49 available</td>
+								<td class="price">$400.99</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>		
+			</div>
+		</div>
 	</div>
+
 </body>

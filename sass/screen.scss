@@ -13,9 +13,10 @@ $font-reg: "roboto_slabregular", Helvetica, Arial, "Lucida Grande", sans-serif;
 $font-bold: "roboto_slabbold", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 /* general */
-html, body {height: 100%;margin: 0;padding: 0;}
+html, body {height: 100%;margin: 0;padding: 0; z-index: 1;}
 body {font-size: 14px; background: #fff;font-family: $font-main;-webkit-font-smoothing: antialiased; line-height: 1.42857em; width: 100%; color: #282828 }
-#wraper {height: auto;min-height: 100%; max-width: 66em; margin: 0 auto; }
+#wraper {position: relative; height: auto;min-height: 100%;width: 66em; margin: 0 auto; box-sizing: border-box;}
+#taas-page #wraper {max-width: 66em; width: 100%;}
 a {text-decoration: none; }
 h1, h2, h3, h5, h6 {font-family: $font-bold; }
 h1 {margin:0; font-size: 2em; padding: 0px 0px 0em 0px;}
@@ -175,7 +176,7 @@ div.filter-group {padding: 1em 0.5em 1.5em 1em;border-bottom: 1px solid #e5e5e5;
 .next-step:hover:before {border-left-color: #9fd957;}
 .prev-step:hover {background:#dbdee4; }
 .prev-step:hover:before {border-right-color: #dbdee4;}
-.step-options {position: relative; max-width: 46em; float: left;}
+.step-options {position: relative; width: 46em; float: left;}
 .step-sidebar {float: right; width: 19em;}
 .step-desc {font-family: $font-light; margin: 20px 0 28px; font-size: 1.2em;}
 .option-box {width: 14em;height: 14em;position: relative;margin-right: 15px; @include inline-block;vertical-align: top; margin-bottom: 15px;}
@@ -191,8 +192,10 @@ width: 39px;height: 39px;display: block;position: absolute;right: 4px;top: 4px;@
 .option-img img {max-height: 90px;}
 .option-img.grayscale { -webkit-filter: grayscale(100%);-moz-filter: grayscale(100%);-ms-filter: grayscale(100%);-o-filter: grayscale(100%);filter: grayscale(100%);filter: gray; /* IE 6-9 */}
 .option-desc {height: 40px;overflow: hidden;text-overflow: ellipsis;}
-.option-price {font-family: $font-bold; color: $color; font-size: 1.1em; position: absolute; bottom: 10px;  left:0;text-align: center; width: 100%}
 .option-more {text-decoration: underline; color: $color; left:0;position: absolute; bottom: 10px; text-align: center; width: 100%}
+.option-price {font-family: $font-bold; color: $color; font-size: 1.1em; position: absolute; bottom: 10px;  left:0;text-align: center; width: 100%;
+	.option-more {bottom: 25px;}
+}
 .option-box input:checked+label:before {@include opacity(1);}
 .option-box input:checked+label  {border: 4px solid $color;padding: 11px 1px 5px 1px;}
 .option-box:hover label {border: 4px solid $color;padding: 11px 1px 5px 1px;}
@@ -206,12 +209,13 @@ box-shadow: inset 1px 1px 2px #f0efef;@include border-radius(3px); }
 @-webkit-keyframes animate-stripes {0% {background-position: 0 0;} 100% {background-position: 350px 0;}}
 @-moz-keyframes animate-stripes {	0% {background-position: 0 0;} 100% {background-position: 350px 0;}}
 .solution-summary {margin-top: 30px; @include border-radius (3px); border: 1px solid #b0d67f}
-.summary-header {line-height: 31px;background: #b0d67f;color: #fff;padding: 4px 12px; overflow: hidden;clear: both;}
+.summary-header {line-height: 31px;background: #b0d67f;color: #fff;padding: 4px 12px; overflow: hidden;clear: both;font-size: 1.2em;}
 .summary-title {float: left;}
 .summary-expand {float: right;display: block;cursor: pointer;}
-.summary-step {padding: 10px 10px 10px 15px;border-bottom: 1px solid #b0d67f;position: relative;}
+.summary-step {padding: 10px 10px 10px 15px;border-bottom: 1px solid #b0d67f;position: relative; }
+.summary-step.collapsed {background: #f3f9ec;}
 .summary-step:last-child {border: none;}
-.sum-step-title {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #b0d67f;cursor: pointer;padding-right: 20px;font-size: 1.2em;}
+.sum-step-title {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #b0d67f;cursor: pointer;padding-right: 20px;font-size: 1.2em;font-family: $font-bold;}
 .sum-step-detail {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;color: #000;padding: 0px 0 0px;font-size: 1em;}
 .sum-step-detail-item {border-top: 1px solid #b0d67f;margin: 0 0px;padding: 9px 0 10px 0;}
 .sum-step-detail .sum-step-detail-item:first-child {border: none;}
@@ -221,12 +225,12 @@ box-shadow: inset 1px 1px 2px #f0efef;@include border-radius(3px); }
 .review-title h5 {display: inline-block;background: #fff;
 white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100%;margin: 0;font-family: $font-light;}
 .review-row.bg .review-title h5 {background: #f7fbf2;}
-.review-title {@include inline-block;vertical-align: top;width: 37%;background: url(../img/reviw-dotted.png) repeat-x 10px 45px;padding:30px 0 18px 0;}
-.review .review-desc {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;@include inline-block;vertical-align: top;padding:30px 0 18px 0;;width: 53%;padding-left: 4%;}
-.review-desc div {display: list-item;}
+.review-title {width: 37%; @include inline-block;vertical-align: top;;padding:30px 0 18px 0;}
+.review .review-desc {@include inline-block;vertical-align: top;padding:30px 0 18px 0;;width: 53%;padding-left: 4%;}
+.review-desc div {}
 .review-desc div:first-child {margin-bottom: 15px;}
 .order-summary .summary-step{text-align: right;}
-.order-span {color: #000;margin-left: 10px;
+.order-span {color: #000;
 display: inline-block;text-align: left;width: 40%;min-height: 20px;vertical-align: top;}
 .terms-list {font-size: 1.2em;margin: 10px 33px 10px 0px;}
 .terms-list div {margin-top: 5px; cursor:pointer;}
@@ -236,6 +240,7 @@ input#solution-to-cart {width: 100%;margin-top: 1.5em;font-size: 1em; font-famil
 #taas-steps #step-1 .solution-summary {display: none;}
 #taas-steps #step-8 .option-title {height: 37px;}
 #taas-steps #step-8 .option-img {margin-top: 15px;}
+#product-tabs {margin-top: 25px;}
 .tabs { width:100%;display:inline-block;}
 .tab-links:after {display:block;clear:both; content:'';}
 .tab-links li {margin:0px 5px 0 0;  float:left;list-style:none;}
@@ -313,6 +318,33 @@ a.star-holder:hover, a.star-holder.active {background: $color; border-color: $co
 .payment-method {margin: 2em 0;}
 .payment-method span.title {margin:0 3em 0 0;}
 
+/* popup */
+
+.popup {position: absolute;display: none; font-size: 14px;z-index: 1011;width: 624px;text-align: left;background-color: #fff;
+background-clip: padding-box;border: 1px solid #8cc73f;border-radius: 3px;-webkit-box-shadow: 0 0px 15px rgba(0,0,0,.1);
+box-shadow: 0 0px 15px rgba(0,0,0,.1);white-space: normal;font-family: Helvetica, Arial, sans-serif;}
+.popup>.arrow, .popup>.arrow:after {
+position: absolute;display: block;width: 0;height: 0;border-color: transparent;border-style: solid;}
+.popup>.arrow {content:"";display: block;left: 84%;margin-left: -11px;
+border-bottom-width: 0;border-top-color: #8cc73f;bottom: -22px;}
+.popup>.arrow {border-width: 11px;}
+.popup>.arrow:after {content: " ";bottom: -9px;margin-left: -10px;border-bottom-width: 0;border-top-color: #fff;}
+.popup>.arrow:after {border-width: 10px;content: "";}
+.popup-info {float:left; }
+.popup-content {padding: 38px 30px 40px;overflow: hidden;}
+.popup-img {float: left; margin: 20px 25px 0 0;}
+.popup-title h3 {position: relative;max-width: 100%;font-size: 1.2em;display: inline-block;margin:0 0 25px; padding:0;font-family: "roboto_slabthin", Helvetica, Arial, "Lucida Grande", sans-serif;font-weight: normal; overflow: hidden; text-overflow: ellipsis;white-space: nowrap;}
+.table-distrib {border-collapse: collapse;border-spacing: 0;width: 100%;margin-top: 20px;}
+.table-distrib tbody tr {border-bottom:1px solid #f7f7f7;}
+.table-distrib tbody tr:last-child {border: none;}
+.table-distrib tbody td {padding: 0.5em 1em;}
+.table-distrib .available {text-align: center;width: 30%;}
+.table-distrib .distributor {text-align: left;width: 40%;}
+.table-distrib .price {text-align: right;width: 30%;}
+.popup .close {position: absolute;right: 15px;top: 15px; cursor: pointer;}
+.popup .form-group.group-radio {margin: 0; font-weight: normal;}
+#blackout {background: rgba(142,197,73,0.1);position: absolute;top: 0; overflow: hidden;z-index: 1000;left: 0;display: none;}
+
 /* icons */
 .search-icon {width: 12px;height: 12px;position: absolute;right: 7px;top: 9px;cursor: pointer;display: block;border: none;}
 span.cart-icon {width: 18px;height: 18px;background-position: 0 -14px;margin: -3px 0.5em 0 0;@include opacity(0.5);}
@@ -361,7 +393,45 @@ span.star-icon.active {background-position: -18px -96px;}
 .no-opacity       .wrapper-dropdown.active .dropdown,
 .no-pointerevents .wrapper-dropdown.active .dropdown {display: block;}
 
-@media (max-width: 980px) {
-	#wraper {padding: 0 15px; min-width: 50em;}
+.link-nav {display: none;}
+@media (max-width: 960px) {
+	#taas-page #wraper {padding: 0 15px; min-width: 53em;}
+	.step-options {max-width: 40em;}
+	.option-box.wide {width: 14em}
+	.popup {margin-left: 15px;}
+	.step-title {float: none; text-align: center;}
+	.step-nav {float: none; text-align: center; margin-top: 20px;}
+}
+@media (max-width: 850px) {
 	.step-options {max-width: 31em;}
+}
+@media (max-width: 750px) {
+	#taas-page #wraper {min-width: 30em;}
+	.step-options {max-width: 23em;}
+	.option-box,.option-box.wide {width: 21.5em}
+}
+@media (max-width: 640px) {
+	.link-nav {display: block;width: 34px;height: 26px; background: url(../img/mobile-nav.png) 0 0 no-repeat;float: right;margin: 20px 0 0 30px;}
+	#global-nav {border: none;background: none;}	
+	#global-nav ul {border-top: 1px solid #e5e5e5; display: none; background: #f7f7f7;position: absolute;width: 100%; z-index: 9999;margin: 0 0px 0 -15px;padding-right: 30px;}
+  	#global-nav ul li{display: block;margin: 0;width: 100%;padding: 0;border:none;}
+  	#global-nav ul li.cart-holder a {border-right: none;border-left: none;}
+  	#global-nav ul li a{display: block;margin: 0;width: 100%;padding: 0 10px 0 20px;border-bottom: 1px solid #e5e5e5;border-right:none;}
+  	#global-nav ul li:hover a, #global-nav ul li:focus a, #global-nav ul li:active a, #global-nav ul li.active a {background: #EBE9E9;}
+}
+@media (max-width: 620px) {
+	.step-options {max-width: 31em;float: none;margin:0  auto;border-bottom: 1px solid #e5e5e5; padding-bottom: 1em; margin-bottom: 1.5em;}
+	.step-sidebar {float: none;margin:0  auto; width: 31em;}
+	#taas-steps #step-1 .step-sidebar {background-position: 50% 67px;}
+	.option-box,.option-box.wide {width: 14em}
+}
+@media (max-width: 450px) {
+	#header-search {display: none;}
+	.step-options {max-width: 14em;}
+	.step-sidebar {width: 14em;}
+	#taas-page #wraper {min-width: 14em;}
+	.step-header .step-title h2 {font-size: 1.5em; display: block;margin: 0.5em 0 1em;}
+	.step-header .step-number {width: 30px;height: 30px;font-size: 1.5em; line-height: 30px;display: inline-block;text-align: center;}
+	.step-nav {margin:0 40px;}
+	.step-nav a.prev-step {margin-bottom: 1em; float: none;}
 }
